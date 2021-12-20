@@ -1,0 +1,39 @@
+nav {
+  width: 90%;
+  /*border:1px solid black;*/
+  margin: 0 auto;
+}
+nav ul {
+  text-align: center;
+}
+nav ul li {
+  display: inline-block;
+  border: 1px solid blue;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  min-width: 150px;
+  padding: 20px 0;
+  margin: 0 -3px;
+  position: relative;
+  bottom: -10px;
+}
+nav ul li.active {
+  padding: 30px 0;
+  bottom: 0px;
+  box-shadow: 0px 5px 5px 2px gray;
+  z-index: -1;
+}
+nav ul li.active a {
+  color: red;
+}
+
+section {
+  width: 90%;
+  border: 1px solid black;
+  border-radius: 15px;
+  margin: 0 auto;
+  height: 100px;
+  background-color: #ff6600;
+}
+
+/*# sourceMappingURL=style.css.map */
