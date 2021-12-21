@@ -1,39 +1,38 @@
 nav {
+  text-align: center;
   width: 90%;
-  /*border:1px solid black;*/
   margin: 0 auto;
+  padding-top: 1.2em;
 }
 nav ul {
-  text-align: center;
+  display: inline-block;
+}
+nav ul.logo {
+  width: 8%;
+}
+nav ul.logo img {
+  width: 100px;
+}
+nav ul.menu {
+  width: 90%;
+  text-align: right;
 }
 nav ul li {
   display: inline-block;
-  border: 1px solid blue;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-  min-width: 150px;
-  padding: 20px 0;
-  margin: 0 -3px;
-  position: relative;
-  bottom: -10px;
-}
-nav ul li.active {
-  padding: 30px 0;
-  bottom: 0px;
-  box-shadow: 0px 5px 5px 2px gray;
-  z-index: -1;
-}
-nav ul li.active a {
-  color: red;
+  margin: 0 5px;
+  padding: 0 10px;
+  border: 1px solid red;
+  text-align: left;
 }
 
-section {
-  width: 90%;
-  border: 1px solid black;
-  border-radius: 15px;
-  margin: 0 auto;
-  height: 100px;
-  background-color: #ff6600;
+div.body-border {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto !important;
+  position: fixed;
+  box-shadow: 0 0 0 6px orange inset;
+  z-index: -1;
 }
 
 /*# sourceMappingURL=style.css.map */
