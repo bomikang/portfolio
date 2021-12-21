@@ -1,38 +1,82 @@
 @charset "UTF-8";
 
 $borderRadius:15px;
+$bgColor:#fff9f9;
+$bdColor:#df5252;
+$inBdColor:#ffeded;
+$white:#ffffff;
+
+body{
+	background-color:$bgColor;
+}
 
 nav{
 	text-align: center;
 	width:90%;
 	margin:0 auto;
-	padding-top:1.2em;
+	padding-top:50px;
 	
 	ul{
 		display: inline-block;
 		
+		li{
+			display:inline-block;
+			font-size:1.1em;
+			
+			a:HOVER{
+				color:$bdColor;
+			}
+		}
+		
 		&.logo{
 			width:8%;
 			
-			img{
-				width:100px;
+			li{
+				background-color:$bdColor;
+				width:100%;
+				
+				a{
+					display:block;
+					height:50px;
+				}
 			}
 		}
 		
 		&.menu{
 			width:90%;
 			text-align:right;
-		}
-		
-		li{
-			display:inline-block;
-			margin:0 5px;
-			padding:0 10px;
-			border:1px solid red;
-			text-align: left;
+			vertical-align: bottom;
+			
+			li{
+				margin:0 10px;
+				padding:0 3px;
+				
+				&.active-menu{
+					a{
+						font-weight: bold;
+						color:$bdColor;
+						border-bottom:3px solid $bdColor;
+					}
+				}
+			}
 		}
 	}
 }//nav
+
+section{
+	width:90%;
+	min-height:300px;
+	border:5px solid $inBdColor;
+	margin:100px auto 0;
+	background-color:$white;
+}//section
+
+footer{
+	width:90%;
+	height:300px;
+	margin:100px auto 0;
+	border:1px solid black;
+}
 
 div.body-border{
 	display:block;
@@ -40,6 +84,6 @@ div.body-border{
 	height:100%;
 	margin:0 auto !important;
 	position:fixed;
-	box-shadow:0 0 0 6px orange inset;
-	z-index:-1;
+	box-shadow:0 0 0 10px $bdColor inset;
+	z-index:1;
 }

@@ -1,28 +1,62 @@
+body {
+  background-color: #fff9f9;
+}
+
 nav {
   text-align: center;
   width: 90%;
   margin: 0 auto;
-  padding-top: 1.2em;
+  padding-top: 50px;
 }
 nav ul {
   display: inline-block;
 }
+nav ul li {
+  display: inline-block;
+  font-size: 1.1em;
+}
+nav ul li a:HOVER {
+  color: #df5252;
+}
 nav ul.logo {
   width: 8%;
 }
-nav ul.logo img {
-  width: 100px;
+nav ul.logo li {
+  background-color: #df5252;
+  width: 100%;
+}
+nav ul.logo li a {
+  display: block;
+  height: 50px;
 }
 nav ul.menu {
   width: 90%;
   text-align: right;
+  vertical-align: bottom;
 }
-nav ul li {
-  display: inline-block;
-  margin: 0 5px;
-  padding: 0 10px;
-  border: 1px solid red;
-  text-align: left;
+nav ul.menu li {
+  margin: 0 10px;
+  padding: 0 3px;
+}
+nav ul.menu li.active-menu a {
+  font-weight: bold;
+  color: #df5252;
+  border-bottom: 3px solid #df5252;
+}
+
+section {
+  width: 90%;
+  min-height: 300px;
+  border: 5px solid #ffeded;
+  margin: 100px auto 0;
+  background-color: #ffffff;
+}
+
+footer {
+  width: 90%;
+  height: 300px;
+  margin: 100px auto 0;
+  border: 1px solid black;
 }
 
 div.body-border {
@@ -31,8 +65,8 @@ div.body-border {
   height: 100%;
   margin: 0 auto !important;
   position: fixed;
-  box-shadow: 0 0 0 6px orange inset;
-  z-index: -1;
+  box-shadow: 0 0 0 10px #df5252 inset;
+  z-index: 1;
 }
 
 /*# sourceMappingURL=style.css.map */
