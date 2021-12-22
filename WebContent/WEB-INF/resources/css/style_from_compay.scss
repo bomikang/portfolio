@@ -1,0 +1,132 @@
+@charset "UTF-8";
+
+// ============================== 변수 설정 ==============================
+$bgColor:#fff9f9;
+$bdColor:#df5252;
+$inBdColor:#ffeded;
+$white:#ffffff;
+
+// ============================== mixin 설정 ==============================
+
+// ============================== 공통 클래스 설정 ==============================
+.inline-block{
+	display: inline-block;
+}
+
+// ============================== CODE 입력 ==============================
+body{
+	background-color:$bgColor;
+}
+
+nav{
+	text-align: center;
+	width:90%;
+	margin:0 auto;
+	padding-top:50px;
+	
+	ul{
+		display: inline-block;
+		
+		li{
+			display:inline-block;
+			font-size:1.1em;
+			
+			a:HOVER{
+				color:$bdColor;
+			}
+		}
+		
+		&.logo{
+			width:8%;
+			
+			li{
+				background-color:$bdColor;
+				width:100%;
+				
+				a{
+					display:block;
+					height:50px;
+				}
+			}
+		}
+		
+		&.menu{
+			width:90%;
+			text-align:right;
+			vertical-align: bottom;
+			
+			li{
+				margin:0 10px;
+				padding:0 3px;
+				
+				&.active-menu{
+					a{
+						font-weight: bold;
+						color:$bdColor;
+						border-bottom:3px solid $bdColor;
+					}
+				}
+			}
+		}
+	}
+}//nav
+
+section{
+	width:90%;
+	min-height:300px;
+	border:5px solid $inBdColor;
+	margin:100px auto 0;
+	background-color:$white;
+
+	div.inner-box{
+		display: block;
+		margin:100px auto;
+
+		&.welcome{
+			text-align:center;
+			
+			p{
+				margin-top:60px;
+				font-size: 1.4em;
+				font-weight: bold;
+			}
+
+			img{
+				width:350px;
+			}
+		}
+	}
+}//section
+
+footer{
+	width:100%;
+	margin:250px auto 100px;
+
+	div{
+		text-align: center;
+
+		a{
+			display: inline-block;
+			margin:5px;
+
+			img{
+				width:32px;
+			}
+		}
+
+		p{
+			margin:20px 0;
+			font-size: 0.7em;
+		}
+	}
+}//footer
+
+div.body-border{
+	display:block;
+	width:100%;
+	height:100%;
+	margin:0 auto !important;
+	position:fixed;
+	box-shadow:0 0 0 10px $bdColor inset;
+	z-index:-1; // 우선은 뒤로 넘김(chrome에서 엘리먼트가 안 잡혀..)
+}//테두리
