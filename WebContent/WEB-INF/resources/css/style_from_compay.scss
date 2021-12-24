@@ -1,9 +1,20 @@
 @charset "UTF-8";
+// ============================== 공통 스타일 설정 ==============================
+*{
+	margin:0; 
+	padding:0; 
+	list-style: none; 
+	color:#4a4a4a; 
+	text-decoration: none;
+}
 
 // ============================== 변수 설정 ==============================
 $bgColor:#fff9f9;
 $bdColor:#df5252;
-$inBdColor:#ffeded;
+$innerBdColor:#f0abab;
+$introTxtColor: #47a585;
+
+$bgGradientColor:linear-gradient(to right bottom, $bgColor, $bdColor);
 $white:#ffffff;
 
 // ============================== mixin 설정 ==============================
@@ -12,10 +23,14 @@ $white:#ffffff;
 .inline-block{
 	display: inline-block;
 }
+.vertical-align-top{
+	vertical-align: top;
+}
 
 // ============================== CODE 입력 ==============================
 body{
-	background-color:$bgColor;
+	// background-color:$bgColor;
+	background:$bgGradientColor;
 }
 
 nav{
@@ -74,7 +89,7 @@ nav{
 section{
 	width:90%;
 	min-height:300px;
-	border:5px solid $inBdColor;
+	border:5px solid $innerBdColor;
 	margin:100px auto 0;
 	background-color:$white;
 
@@ -86,9 +101,16 @@ section{
 			text-align:center;
 			
 			p{
-				margin-top:60px;
-				font-size: 1.4em;
 				font-weight: bold;
+				text-align: left;
+				letter-spacing: -3px;
+				font-size:2em;
+				margin-left: 20px;
+				&:nth-child(2){
+					font-size: 3em;	
+					color:$introTxtColor;
+					text-shadow: 1px 1px #4a4a4a;
+				}
 			}
 
 			img{
