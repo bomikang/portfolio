@@ -18,6 +18,12 @@ $bgGradientColor:linear-gradient(to right bottom, $bgColor, $bdColor);
 $white:#ffffff;
 
 // ============================== mixin 설정 ==============================
+@mixin emphaText { // 강조 텍스트
+	font-weight: bold;
+	font-size: 3em;	
+	color:$introTxtColor;
+	text-shadow: 1px 1px #4a4a4a;
+}
 
 // ============================== 공통 클래스 설정 ==============================
 .inline-block{
@@ -45,7 +51,7 @@ nav{
 		li{
 			display:inline-block;
 			font-size:1.1em;
-			
+ 			
 			a:HOVER{
 				color:$bdColor;
 			}
@@ -107,14 +113,35 @@ section{
 				font-size:2em;
 				margin-left: 20px;
 				&:nth-child(2){
-					font-size: 3em;	
-					color:$introTxtColor;
-					text-shadow: 1px 1px #4a4a4a;
+					@include emphaText();
 				}
 			}
 
 			img{
 				width:350px;
+			}
+		}
+
+		&.introduce{
+			table{
+				margin: 0 auto;
+
+				label{
+					display: inline-block;
+					width:80px;
+					margin:5px 0;
+					font-weight: bold;
+				}
+	
+				span{
+					display: inline-block;
+				}
+	
+				td:last-child{
+					p:last-child{
+						@include emphaText();
+					}
+				}
 			}
 		}
 	}
