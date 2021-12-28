@@ -1,0 +1,70 @@
+@charset "UTF-8";
+
+// ============================== common styles ==============================
+*{margin:0; padding:0; list-style: none; text-decoration: none; overflow: hidden; color:#4a4a4a;}
+
+// ============================== init variables ==============================
+$bgColor:#fff9f9;
+$bdColor:#ffb7b7;
+$innerBdColor:#f0abab;
+$introTxtColor: #47a585;
+
+$bgGradientColor:linear-gradient(to right bottom, $bgColor, $bdColor);
+$white:#ffffff;
+
+// ============================== init classes ==============================
+.block{display: block;}
+.inline-block{display: inline-block;}
+
+// ============================== code ==============================
+section{
+    width:100vw;
+    position: fixed;
+    display:flex;
+    align-items:center;
+    height: 100vh;
+
+    div.container{
+        border: 1px solid black;
+        width:60%;
+        height:70vh;
+        margin: 0 auto;
+
+        nav{
+            display:inline-flex;
+            align-items:center;
+            width: 10%;
+            height: 100%;
+            float: left;
+            border-right: 1px solid red;
+        }//nav
+
+        div{
+            width:30%;
+            float: left;
+            height: 100%;
+            border-right: 1px solid blue;
+        }
+
+        div.contents{
+            width:auto;
+            // display: inline-flex;
+            border-right: 1px solid green;
+            height: 100%;
+        }
+    }//div.container
+}//section
+
+body{
+	background:$bgColor;
+}//배경 색상
+
+div.body-border{
+	display:block;
+	width:100%;
+	height:100%;
+	margin:0 auto !important;
+	position:fixed;
+	box-shadow:0 0 0 10px $bdColor inset;
+	z-index:-1; // 우선은 뒤로 넘김(chrome에서 엘리먼트가 안 잡혀..)
+}//테두리
