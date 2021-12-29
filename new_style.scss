@@ -26,32 +26,50 @@ section{
 
     div.container{
         border: 1px solid black;
-        width:60%;
+        width:75%;
         height:70vh;
         margin: 0 auto;
 
         nav{
             display:inline-flex;
             align-items:center;
-            width: 10%;
+            width: 15%;
             height: 100%;
             float: left;
             border-right: 1px solid red;
+            background-color:$white;
         }//nav
 
-        div{
+        div#intro-box{
             width:30%;
             float: left;
             height: 100%;
-            border-right: 1px solid blue;
-        }
+            box-shadow: 3px 0px 3px 0px gray;
+            background-color:$white;
 
-        div.contents{
+            div{
+                &:first-child{
+                    padding:20px 0;
+                    text-align: center;
+                    img{
+                        width: 85%;
+                    }
+    
+                    h1{
+                        display: inline-block;
+                        text-align: center;
+                        border-bottom: 2px solid $bdColor;
+                        margin-top: 20px;
+                    }
+                }
+            }
+        }//div#intro-box
+
+        div#contents{
             width:auto;
-            // display: inline-flex;
             border-right: 1px solid green;
             height: 100%;
-        }
+        }//div#contents
     }//div.container
 }//section
 
