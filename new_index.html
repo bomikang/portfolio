@@ -6,9 +6,10 @@
 	<link rel="stylesheet" href="resources/css/new_style.css" />
 	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 	<script>
-		
-		$(document).ready({
-
+		document.addEventListener("DOMContentLoaded", function(){
+			
+			var test = document.getElementsByTagName("svg")[0].clientWidth;
+			console.log(test);
 		});
 	</script>
 </head>
@@ -19,7 +20,7 @@
 		<div class="block container">
 			<nav>
 				<ul>
-					<li class="active-menu"><a href="">About Me</a></li>
+					<li class="active-menu"><a href="">About</a></li>
 					<li><a href="">Career</a></li>
 					<li><a href="">Skills</a></li>
 					<li><a href="">Project1</a></li>
@@ -28,12 +29,15 @@
 				</ul>
 			</nav>
 
-			<div class="fixed-box">
-				testtest1
+			<div id="intro-box">
+				<div>
+					<img src="resources/images/icon-business-person-edited.png" alt="">
+					<h1>강 보 미</h1>
+				</div>
 			</div>
 
-			<div class="contents">
-				testgggggggg
+			<div id="contents">
+				
 			</div>
 		</div>
 	</section>
