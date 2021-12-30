@@ -26,18 +26,18 @@ section{
 
     div.container{
         border: 1px solid black;
-        width:75%;
+        width:85%;
         height:70vh;
         margin: 0 auto;
 
         nav{
             display:inline-flex;
             align-items:center;
-            width: 15%;
+            width: 10%;
             height: 100%;
             float: left;
             border-right: 1px solid red;
-            background-color:$white;
+            background-color:transparent;
         }//nav
 
         div#intro-box{
@@ -52,7 +52,10 @@ section{
                     padding:20px 0;
                     text-align: center;
                     img{
-                        width: 85%;
+                        display: block;
+                        width: 90%;
+                        max-width:250px;
+                        margin: 0 auto;
                     }
     
                     h1{
@@ -60,8 +63,35 @@ section{
                         text-align: center;
                         border-bottom: 2px solid $bdColor;
                         margin-top: 20px;
+                        font-size: 2.5em;
+                    }//이름
+                }
+
+                &.sns-link{
+                    display: block;
+                    text-align: center;
+
+                    p{
+                        font-size:0.9em;
+                    }
+
+                    div{
+                        margin: 40px 0;
+                        a{
+                            margin:0 3px;
+                            img{
+                                width:32px;
+                            }
+                        }
                     }
                 }
+            }
+
+            footer{
+                display: block;
+                position: relative;
+                top: 90px;
+                font-size: 0.8em;
             }
         }//div#intro-box
 
@@ -69,7 +99,13 @@ section{
             width:auto;
             border-right: 1px solid green;
             height: 100%;
+            overflow: auto;
+
+            div:first-child{
+                padding:20px;
+            }
         }//div#contents
+
     }//div.container
 }//section
 
