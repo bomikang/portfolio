@@ -7,11 +7,6 @@
   color: #4a4a4a;
 }
 
-hr {
-  border: none;
-  margin: 20px 0;
-}
-
 .block {
   display: block;
 }
@@ -28,6 +23,7 @@ section {
   height: 100vh;
 }
 section div.container {
+  border: 1px solid black;
   width: 85%;
   height: 70vh;
   margin: 0 auto;
@@ -35,25 +31,18 @@ section div.container {
 section div.container nav {
   display: inline-flex;
   align-items: center;
-  max-width: 10%;
+  width: 10%;
   height: 100%;
   float: left;
-}
-section div.container nav ul {
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-  background-color: #ffffff;
-  padding: 0 20px;
-}
-section div.container nav ul li {
-  margin: 20px 0;
+  border-right: 1px solid red;
+  background-color: transparent;
 }
 section div.container div#intro-box {
   width: 30%;
   float: left;
   height: 100%;
+  box-shadow: 3px 0px 3px 0px gray;
   background-color: #ffffff;
-  border-radius: 10px;
 }
 section div.container div#intro-box div:first-child {
   padding: 20px 0;
@@ -94,44 +83,14 @@ section div.container div#intro-box footer {
   top: 90px;
   font-size: 0.8em;
 }
-section div.container div.contents {
+section div.container div#contents {
   width: auto;
+  border-right: 1px solid green;
   height: 100%;
   overflow: auto;
-  background-color: white;
 }
-section div.container div.contents::-webkit-scrollbar-track {
-  border-radius: 15px;
-  background-color: #F5F5F5;
-}
-section div.container div.contents::-webkit-scrollbar {
-  width: 10px;
-  background-color: #F5F5F5;
-}
-section div.container div.contents::-webkit-scrollbar-thumb {
-  border-radius: 15px;
-  background-color: #dddddd;
-}
-section div.container div.contents div.inner-contents {
-  padding: 0 50px 50px;
-}
-section div.container div.contents div.inner-contents h1 {
-  margin-top: 50px;
-  border-bottom: 2px solid #ffb7b7;
-}
-section div.container div.contents div.inner-contents div {
-  margin-top: 20px;
-}
-section div.container div.contents div.inner-contents div p {
-  margin: 10px 0;
-}
-section div.container div.contents div.inner-contents div p label {
-  display: inline-block;
-  width: 70px;
-  vertical-align: top;
-}
-section div.container div.contents div.inner-contents div p span {
-  display: inline-block;
+section div.container div#contents div:first-child {
+  padding: 20px;
 }
 
 body {
@@ -148,4 +107,4 @@ div.body-border {
   z-index: -1;
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=new_style.css.map */
