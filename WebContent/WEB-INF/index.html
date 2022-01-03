@@ -6,7 +6,19 @@
 	<link rel="stylesheet" href="resources/css/style.css" />
 	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 	<script>
-		document.addEventListener("DOMContentLoaded", function(){
+		/* ========================= READY ============================== */
+		document.addEventListener('DOMContentLoaded', function(){
+			$('nav ul li a').click(function(){
+				const showHref = 'div'+$(this).attr('href');
+				
+				//acive 클래스 추가
+				$('nav ul li').removeClass('active-menu');
+				$(this).parent('li').addClass('active-menu');
+				$('div.inner-contents').removeClass('active-contents');
+				$(showHref).addClass('active-contents');
+				
+				event.preventDefault();
+			});
 		});
 	</script>
 </head>
@@ -17,12 +29,12 @@
 		<div class="block container">
 			<nav>
 				<ul>
-					<li class="active-menu"><a href="">ABOUT</a></li>
-					<li><a href="">CAREER</a></li>
-					<li><a href="">SKILLS</a></li>
-					<li><a href="">PROJECT1</a></li>
-					<li><a href="">PROJECT2</a></li>
-					<li><a href="">CONTACT</a></li>
+					<li class="active-menu"><a href="#ABOUT">ABOUT</a></li>
+					<li><a href="#CAREER">CAREER</a></li>
+					<li><a href="SKILLS">SKILLS</a></li>
+					<li><a href="PROJECT1">PROJECT1</a></li>
+					<li><a href="PROJECT2">PROJECT2</a></li>
+					<li><a href="CONTACT">CONTACT</a></li>
 				</ul>
 			</nav>
 
@@ -49,7 +61,8 @@
 			</div>
 
 			<div class="contents about">
-				<div class="inner-contents">
+				<!-- ============================== ABOUT ============================== -->
+				<div class="inner-contents active-contents" id="ABOUT">
 					<h1>About Me</h1>
 					<div id="about-me">
 						<p>
@@ -96,6 +109,23 @@
 						<p>
 							<label for="">졸업연도</label>
 							<span>2016</span>
+						</p>
+						<hr>
+						<p>
+							<label for=""><b>기타</b></label>
+							<span><b>대구아이티교육원 (국비지원)</b></span>
+						</p>
+						<p>
+							<label for="">기간</label>
+							<span>2016.09 ~ 2017.02 (6개월)</span>
+						</p>
+						<p>
+							<label for="">과정명</label>
+							<span>빅데이터기반 웹/앱 개발자 과정</span>
+						</p>
+						<p>
+							<label for="">교육내용</label>
+							<span>Java, Html5/CSS3, JavaScript, Jquery, Jquery Mobile, Spring-MVC, Android, MySQL 등 교육 이수</span>
 						</p>
 					</div>
 
@@ -167,89 +197,30 @@
 						</p>
 					</div>
 				</div>
+				<!-- ============================== CAREER ============================== -->
+				<div class="inner-contents" id="CAREER">
+					<h1>Career</h1>
+					<div id="about-me">
+						<p>
+							<label for=""><b>이름</b></label>
+							<span>강보미</span>
+						</p>
+						<p>
+							<label for=""><b>나이</b></label>
+							<span>27세 (1995년생)</span>
+						</p>
+						<p>
+							<label for=""><b>거주지</b></label>
+							<span>대한민국 서울특별시 성동구</span>
+						</p>
+						<p>
+							<label for=""><b>이메일</b></label>
+							<span>bomiisworldstar@gmail.com<br>important_mail@naver.com</span>
+						</p>
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>
-	<!-- ==============================MENU============================== -->
-	<!-- <nav>
-		<ul class="logo">
-			<li>
-				<a href="">
-					LOGO
-				</a>
-			</li>
-		</ul>
-		<ul class="menu">
-			<li class="active-menu"><a href="">About Me</a></li>
-			<li><a href="">Career</a></li>
-			<li><a href="">Skills</a></li>
-			<li><a href="">Project1</a></li>
-			<li><a href="">Project2</a></li>
-			<li><a href="">Contact</a></li>
-		</ul>
-	</nav> -->
-	<!-- ==============================CONTENTS============================== -->
-	<!-- <section>
-		<div class="inner-box welcome">
-			<div class="inline-block">
-				<table>
-					<tr>
-						<td>
-							<p>Hi,</p>
-							<p>I'm Bomi,</p>
-							<p>Web Developer.</p>
-						</td>
-						<td><img src="resources/images/icon-business-person.png" alt=""></td>
-					</tr>
-				</table>
-			</div>
-		</div>	
-	</section>
-	<section>
-		<div class="inner-box introduce">
-			<div>
-				<table>
-					<tr>
-						<td>				
-							<div class="inline-block">
-								<p>
-									<label for="">이름</label><span>강보미</span>
-								</p>
-								<p>
-									<label for="">나이</label><span>27 (1995)</span>
-								</p>
-								<p>
-									<label for="">거주지</label><span>서울특별시 성동구</span>
-								</p>
-								<p>
-									<label for="">E-Mail</label>
-									<span>
-										bomiisworldstar@gmail.com<br>
-										important_mail@naver.com
-									</span>
-								</p>
-							</div>
-						</td>
-					</tr>
-				</table>
-			</div>
-		</div>
-	</section>
-	<section>
-		<div class="inner-box"></div>
-	</section> -->
-	<!-- ==============================FOOTER============================== -->
-	<!-- <footer>
-		<div>
-			<a href=""><img src="resources/images/icon-github.png" alt=""></a>
-			<a href=""><img src="resources/images/icon-github.png" alt=""></a>
-			<a href=""><img src="resources/images/icon-github.png" alt=""></a>
-			<a href=""><img src="resources/images/icon-github.png" alt=""></a>
-			<a href=""><img src="resources/images/icon-github.png" alt=""></a>
-		</div>
-		<div>
-			<p>Copyright © 2021-2022 BOMI KANG All rights reserved.</p>
-		</div>
-	</footer> -->
 </body>
 </html>

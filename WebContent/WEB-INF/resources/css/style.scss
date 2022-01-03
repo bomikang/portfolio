@@ -39,16 +39,12 @@ section{
 			max-width:10%;
             height: 100%;
             float: left;
-            
-            // background-color:$white;
 			ul{
-				border-top-left-radius: $borderRadius;
-				border-bottom-left-radius: $borderRadius;
 				background-color: $white;
 				padding: 0 20px;
 
 				li{
-					margin:20px 0;
+					margin:30px 0;
 				}
 			}
         }//nav
@@ -58,7 +54,6 @@ section{
             float: left;
             height: 100%;
             background-color:$white;
-			border-radius: $borderRadius;
 
             div{
                 &:first-child{
@@ -114,8 +109,7 @@ section{
             overflow: auto;
 			background-color:white ;
 
-			// -----스크롤바-----
-			
+			// ----- 스크롤바 -----			
 			&::-webkit-scrollbar-track{
 				border-radius: 15px;
 				background-color: #F5F5F5;
@@ -132,10 +126,20 @@ section{
 				border-radius: 15px;
 				background-color: $lightGray;
 			}
-			// -----------------
+            // -------------------
 			
 			div.inner-contents{
 				padding:0 50px 50px;
+
+                // ----- ACTIVE -----
+                &.active-contents{
+                    display: block;
+                }
+
+                &:not(.active-contents){
+                    display: none;
+                }
+                // ------------------
 
 				h1{
 					margin-top: 50px;
@@ -148,7 +152,7 @@ section{
 						margin: 10px 0;
 						label{
 							display: inline-block;
-							width:70px;
+							width:80px;
 							vertical-align: top;
 						}
 						span{
