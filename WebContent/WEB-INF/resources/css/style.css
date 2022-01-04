@@ -135,6 +135,7 @@ section div.container div.contents div.inner-contents div p label {
 }
 section div.container div.contents div.inner-contents div p span {
   display: inline-block;
+  max-width: 90%;
 }
 
 body {

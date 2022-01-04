@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>MY PROJECT</title>
+	<link rel="stylesheet" href="resources/css/style.css" />
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+	<script>
+		/* ========================= READY ============================== */
+		document.addEventListener('DOMContentLoaded', function(){
+			$('nav ul li a').click(function(){
+				const showHref = 'div'+$(this).attr('href');
+				
+				//acive 클래스 추가
+				$('nav ul li').removeClass('active-menu');
+				$(this).parent('li').addClass('active-menu');
+				$('div.inner-contents').removeClass('active-contents');
+				$(showHref).addClass('active-contents');
+				
+				event.preventDefault();
+			});
+		});
+	</script>
+</head>
+<body>
+	<div class="body-border"></div>
+	
+	<section>
+		<div class="block container">
+			<nav>
+				<ul>
+					<li class="active-menu"><a href="#ABOUT">ABOUT</a></li>
+					<li><a href="#CAREER">CAREER</a></li>
+					<li><a href="#SKILLS">SKILLS</a></li>
+					<li><a href="#PROJECT1">PROJECT1</a></li>
+					<li><a href="PROJECT2">PROJECT2</a></li>
+					<li><a href="CONTACT">CONTACT</a></li>
+				</ul>
+			</nav>
+
+			<div id="intro-box">
+				<div class="my">
+					<img src="resources/images/icon-business-person-edited.png" alt="">
+					<h1>강 보 미</h1>
+				</div>
+				<div class="sns-link">
+					<p>Web Developer</p>
+					<div>
+						<a href=""><img src="resources/images/icon-github.png" alt=""></a>
+						<a href=""><img src="resources/images/icon-github.png" alt=""></a>
+						<a href=""><img src="resources/images/icon-github.png" alt=""></a>
+						<a href=""><img src="resources/images/icon-github.png" alt=""></a>
+						<a href=""><img src="resources/images/icon-github.png" alt=""></a>
+					</div>
+				</div>
+				<footer>
+					<div>
+						<p>Copyright © 2021 BOMI KANG All rights reserved.</p>
+					</div>
+				</footer>
+			</div>
+
+			<div class="contents about">
+				<!-- ============================== ABOUT ============================== -->
+				<div class="inner-contents active-contents" id="ABOUT">
+					<h1>About Me</h1>
+					<div id="about-me">
+						<p>
+							<label for=""><b>이름</b></label>
+							<span>강보미</span>
+						</p>
+						<p>
+							<label for=""><b>나이</b></label>
+							<span>27세 (1995년생)</span>
+						</p>
+						<p>
+							<label for=""><b>거주지</b></label>
+							<span>대한민국 서울특별시 성동구</span>
+						</p>
+						<p>
+							<label for=""><b>이메일</b></label>
+							<span>bomiisworldstar@gmail.com<br>important_mail@naver.com</span>
+						</p>
+					</div>
+
+					<h1>Education</h1>
+					<div id="education">
+						<p>
+							<label for=""><b>고등학교</b></label>
+							<span><b>유일여자고등학교(인문계)</b></span>
+						</p>
+						<p>
+							<label for="">졸업연도</label>
+							<span>2014</span>
+						</p>
+						<hr>
+						<p>
+							<label for=""><b>대학교</b></label>
+							<span><b>강동대학교(전문대학)</b></span>
+						</p>
+						<p>
+							<label for="">전공</label>
+							<span>컴퓨터정보학과</span>
+						</p>
+						<p>
+							<label for="">평점</label>
+							<span>4.45 / 4.5</span>
+						</p>
+						<p>
+							<label for="">졸업연도</label>
+							<span>2016</span>
+						</p>
+						<hr>
+						<p>
+							<label for=""><b>기타</b></label>
+							<span><b>대구아이티교육원 (국비지원)</b></span>
+						</p>
+						<p>
+							<label for="">기간</label>
+							<span>2016.09 ~ 2017.02 (6개월)</span>
+						</p>
+						<p>
+							<label for="">과정명</label>
+							<span>빅데이터기반 웹/앱 개발자 과정</span>
+						</p>
+						<p>
+							<label for="">교육내용</label>
+							<span>Java, Html5/CSS3, JavaScript, Jquery, Jquery Mobile, Spring-MVC, Android, MySQL 등 교육 이수</span>
+						</p>
+					</div>
+
+					<h1>Certificate</h1>
+					<div id="certificate">
+						<p>
+							<label for=""><b>자격증명</b></label>
+							<span><b>컴퓨터활용능력1급</b></span>
+						</p>
+						<p>
+							<label for="">취득기관</label>
+							<span>대한상공회의소</span>
+						</p>
+						<p>
+							<label for="">취득날짜</label>
+							<span>2021.05</span>
+						</p>
+						<hr>
+						<p>
+							<label for=""><b>자격증명</b></label>
+							<span><b>정보처리산업기사</b></span>
+						</p>
+						<p>
+							<label for="">취득기관</label>
+							<span>한국산업인력공단</span>
+						</p>
+						<p>
+							<label for="">취득날짜</label>
+							<span>2017.11</span>
+						</p>
+						<hr>
+						<p>
+							<label for=""><b>자격증명</b></label>
+							<span><b>네트워크관리사2급</b></span>
+						</p>
+						<p>
+							<label for="">취득기관</label>
+							<span>한국정보통신자격협회</span>
+						</p>
+						<p>
+							<label for="">취득날짜</label>
+							<span>2014.11</span>
+						</p>
+						<hr>
+						<p>
+							<label for=""><b>자격증명</b></label>
+							<span><b>ICDL(International Computer Driving Licence)</b></span>
+						</p>
+						<p>
+							<label for="">취득기관</label>
+							<span>한국생산성본부</span>
+						</p>
+						<p>
+							<label for="">취득날짜</label>
+							<span>2014.06</span>
+						</p>
+						<hr>
+						<p>
+							<label for=""><b>자격증명</b></label>
+							<span><b>자동차운전면허 1종보통</b></span>
+						</p>
+						<p>
+							<label for="">취득기관</label>
+							<span>전라북도경찰청</span>
+						</p>
+						<p>
+							<label for="">취득날짜</label>
+							<span>2014.02</span>
+						</p>
+					</div>
+				</div>
+				<!-- ============================== CAREER ============================== -->
+				<div class="inner-contents" id="CAREER">
+					<h1>Career</h1>
+					<div>
+						<p>
+							<label for=""><b>회사명</b></label>
+							<span><b>(주)레인보우브레인</b></span>
+						</p>
+						<p>
+							<label for="">재직기간</label>
+							<span>2021.08 ~ 현재 (재직중)</span>
+						</p>
+						<p>
+							<label for="">부서/직급</label>
+							<span>RPA개발부/주임</span>
+						</p>
+						<p>
+							<label for="">주요직무</label>
+							<span>RPA개발 및 유지보수</span>
+						</p>
+						<p>
+							<label for="">프로젝트</label>
+							<span>1) CJ제일제당 BW고도화 RPA개발
+								<br>- 수행기간 : 2021.11 ~ 2021.12 (2개월)
+								<br>- 수행내용 : 데이터 조회 프로그램인 SAP BW에서 SAP AO로 RPA 개발 및 로직 변경
+								<br>&nbsp;&nbsp;> Automation Anywhere v11 툴 이용
+								<br>&nbsp;&nbsp;> RPA 신규 개발(공통 모듈)
+								<br>&nbsp;&nbsp;> 기존 RPA 로직 변경 작업
+							</span>
+						</p>
+						<p>
+							<label for=""></label>
+							<span>2) MSS Holdings(모나리자) 상품 최저가 수집 RPA 개발
+								<br>- 수행기간 : 2021.09 ~ 2021.10 (2개월)
+								<br>- 수행내용 : 총 11개 E-Commerce 사이트 내 제지 관련 상품 최저가 RPA 수집
+								<br>&nbsp;&nbsp;> Automation Anywhere 360 툴 이용
+								<br>&nbsp;&nbsp;> RPA 신규 개발(공통 모듈)
+								<br>&nbsp;&nbsp;> RPA 신규 개발(옥션, 위메프, 카카오스토어 상품 최저가 크롤링)
+							</span>
+						</p>
+						<hr>
+						<p>
+							<label for=""><b>회사명</b></label>
+							<span><b>(주)컴즈</b></span>
+						</p>
+						<p>
+							<label for="">재직기간</label>
+							<span>2018.10 ~ 2021.03 (2년 6개월)</span>
+						</p>
+						<p>
+							<label for="">부서/직급</label>
+							<span>QA사업부/사원</span>
+						</p>
+						<p>
+							<label for="">주요직무</label>
+							<span>E-Commerce 시스템 Web & Mobile 검증</span>
+						</p>
+						<p>
+							<label for="">프로젝트</label>
+							<span>1) SK M&Service 베네피아 E-Commerce 운영 QA
+								<br>- 수행기간 : 2018.10 ~ 2019.05, 2019.08 ~ 2021.03 (2년 3개월)
+								<br>- 수행내용 : 폐쇄형 E-Commerce 서비스 검증 업무
+								<br>&nbsp;&nbsp;> Web & Mobile 검증
+								<br>&nbsp;&nbsp;> PMS(Jira)를 이용한 결함 관리
+								<br>&nbsp;&nbsp;> Java Selenium을 이용한 자동화 테스트
+							</span>
+						</p>
+						<p>
+							<label for=""></label>
+							<span>2) SK M&Service 베네피아 모바일 고도화 QA
+								<br>- 수행기간 : 2019.05 ~ 2019.07 (3개월)
+								<br>- 수행내용 : 폐쇄형 E-Commerce 서비스 Native App 검증 업무
+								<br>&nbsp;&nbsp;> AOS, IOS App 기능 및 UI 검증
+								<br>&nbsp;&nbsp;> BTS(Redmine)를 이용한 결함 관리
+							</span>
+						</p>
+					</div>
+				</div>
+				<!-- ============================== SKILLS ============================== -->
+				<div class="inner-contents" id="SKILLS">
+					<h1>Skills</h1>
+					<div>
+						<p>
+							<label for="">구분</label>
+							<span>BACK-END</span>
+						</p>
+						<p>
+							<label for=""><b>기술</b></label>
+							<span><b>Java, Jsp, Android</b></span>
+						</p>
+						<hr>
+						<p>
+							<label for="">구분</label>
+							<span>DATABASE</span>
+						</p>
+						<P>
+							<label for=""><b>기술</b></label>
+							<span><b>Mysql, Oracle, Firebase</b></span>
+						</P>
+						<hr>
+						<p>
+							<label for="">구분</label>
+							<span>FRONT-END</span>
+						</p>
+						<P>
+							<label for=""><b>기술</b></label>
+							<span><b>Html5, Css3(Scss, Sass), Javascript, Jquery, Android</b></span>
+						</P>
+						<hr>
+						<p>
+							<label for="">구분</label>
+							<span>FRAMEWORK</span>
+						</p>
+						<P>
+							<label for=""><b>기술</b></label>
+							<span><b>Spring Framework</b></span>
+						</P>
+						<hr>
+						<p>
+							<label for="">구분</label>
+							<span>TOOLS</span>
+						</p>
+						<P>
+							<label for=""><b>기술</b></label>
+							<span><b>Eclipse, Visual Studio Code, Android Studio, Github</b></span>
+						</P>
+						<hr>
+						<p>
+							<label for="">구분</label>
+							<span>ETC.</span>
+						</p>
+						<P>
+							<label for=""><b>기술</b></label>
+							<span><b>Automation Anywhere A360 (RPA), Photoshop CC</b></span>
+						</P>
+					</div>
+				</div>
+				<!-- ============================== PROJECT1 ============================== -->
+				<div class="inner-contents" id="PROJECT1">
+					<h1>1. Project (2021) - 윌비스타 프론트 사이트 제작</h1>
+					<div>
+						<p>
+							<label for=""><b>주제</b></label>
+							<span><b>베트남 인플루언서 홍보 사이트 제작</b></span>
+						</p>
+						<p>
+							<label for=""><b>개발형태</b></label>
+							<span>1인 개발(프리랜서)</span>
+						</p>
+						<p>
+							<label for=""><b>개발기간</b></label>
+							<span>2021.02 ~ 2021.02 (2주)</span>
+						</p>
+						<p>
+							<label for=""><b>개발환경</b></label>
+							<span>Eclipse, Chrome, Safari, Html, Css, Jquery, Bootstrap</span>
+						</p>
+						<p>
+							<label for=""><b>느낀점</b></label>
+							<span>
+								이전 회사에서 QA로 일하던 시절 팀장님이 HTML 작업할 수 있냐고 제안해주셔서 아르바이트로 했던 작업입니다.
+								<br>커뮤니케이션은 이메일과 전화로 하면서 큰 불편함 없이 작업하였습니다.
+								<br>처음으로 1인 프리랜서라는 직업을 조금이나마 경험할 수 있었습니다. 
+							</span>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</body>
+</html>
