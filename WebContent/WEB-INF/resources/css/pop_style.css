@@ -155,4 +155,20 @@ section div.container div.contents div.inner-contents div p span {
   word-break: keep-all;
 }
 
-/*# sourceMappingURL=style.css.map */
+.container {
+  overflow: auto;
+}
+.container::-webkit-scrollbar-track {
+  border-radius: 15px;
+  background-color: #F5F5F5;
+}
+.container::-webkit-scrollbar {
+  width: 10px;
+  background-color: #F5F5F5;
+}
+.container::-webkit-scrollbar-thumb {
+  border-radius: 15px;
+  background-color: #dddddd;
+}
+
+/*# sourceMappingURL=pop_style.css.map */

@@ -1,0 +1,9 @@
+@charset "UTF-8";
+@import "style.scss";
+
+.container{
+    overflow: auto;
+
+    //스크롤바
+    @include scrollbar-style(); 
+}
