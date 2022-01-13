@@ -6,14 +6,12 @@ hr{border:none; margin:20px 0;}
 
 // ============================== init variables ==============================
 $bgColor:#fff9f9;
+$thumbBgColor:#b59a9a;
 $bdColor:#ffb7b7;
 $innerBdColor:#f0abab;
 $introTxtColor: #47a585;
 $lightGray:#dddddd;
-
-$bgGradientColor:linear-gradient(to right bottom, $bgColor, $bdColor);
 $white:#ffffff;
-$borderRadius:10px;
 
 // ============================== init classes ==============================
 .block{display: block;}

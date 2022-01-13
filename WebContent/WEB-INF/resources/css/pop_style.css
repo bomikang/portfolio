@@ -156,6 +156,8 @@ section div.container div.contents div.inner-contents div p span {
 }
 
 .container {
+  width: 90%;
+  height: 80vh !important;
   overflow: auto;
 }
 .container::-webkit-scrollbar-track {
@@ -169,6 +171,51 @@ section div.container div.contents div.inner-contents div p span {
 .container::-webkit-scrollbar-thumb {
   border-radius: 15px;
   background-color: #dddddd;
+}
+.container > h1 {
+  text-align: center;
+}
+.container div:not(.thumbnail) {
+  padding: 10px;
+}
+.container div:not(.thumbnail) h3 {
+  margin-bottom: 10px;
+  padding: 10px;
+}
+.container div:not(.thumbnail):not(:first-of-type) > h3 {
+  margin-top: 30px;
+}
+.container div:not(.thumbnail) span.detail-title {
+  color: #1e9d8b;
+  background-color: #d7e9e6;
+  padding: 5px;
+  display: inline-block;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.container div:not(.thumbnail) .thumbnail {
+  width: 250px;
+  height: 250px;
+  border: 10px solid #ffffff;
+  box-shadow: 0px 0px 10px 1px #dddddd;
+  background-color: #b59a9a;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+.container div:not(.thumbnail) .thumbnail img {
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.7;
+  transition: all 0.3s ease-out;
+}
+.container div:not(.thumbnail) .thumbnail img:hover {
+  opacity: 1;
+  transform: scale(1.6);
 }
 
 /*# sourceMappingURL=pop_style.css.map */

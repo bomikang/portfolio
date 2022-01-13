@@ -1,9 +1,68 @@
 @charset "UTF-8";
 @import "style.scss";
 
-.container{
+.container{    
+    width: 90%;
+    height: 80vh !important;
     overflow: auto;
 
     //스크롤바
     @include scrollbar-style(); 
+
+    > h1{
+        text-align: center;
+    }
+
+    div:not(.thumbnail){
+        padding: 10px;
+
+        //페이지 타이틀
+        h3{
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+
+        &:not(:first-of-type) > h3{ //첫번째 h3 태그 외 나머지 h3태그에 마진 추가
+            margin-top:30px;
+        }
+        //------------
+        
+        span.detail-title{
+            color: #1e9d8b;
+            background-color: #d7e9e6;
+            padding: 5px;
+            display: inline-block;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            font-weight: bold;
+        }//세부 타이틀
+        
+        .thumbnail{
+            width: 250px;
+            height: 250px;
+            border: 10px solid $white;
+            box-shadow: 0px 0px 10px 1px $lightGray;
+            background-color: #b59a9a;
+
+            //이미지 센터 설정
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+
+            img{
+                cursor: pointer;
+                width:100%;
+                opacity: 0.7;
+                transition: all .3s ease-out;  
+
+                &:hover{
+                    opacity: 1;
+                    transform: scale(1.6);
+                }
+            }
+        }
+    }
 }
