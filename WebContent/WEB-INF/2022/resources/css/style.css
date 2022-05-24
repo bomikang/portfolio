@@ -1,0 +1,119 @@
+@charset "UTF-8";
+/*배경 테두리 컬러*/
+/*배경 테두리 넓이 및 길이*/
+/*반응형 화면 크기*/
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  overflow: hidden;
+  color: #4a4a4a;
+}
+
+hr {
+  border: none;
+  margin: 20px 0;
+}
+
+body {
+  width: 100%;
+  position: fixed;
+}
+
+/*배경 테두리*/
+div.body-border {
+  display: block;
+  background-color: #ccc;
+  position: fixed;
+}
+div.body-border#leftTopWidth {
+  left: 0;
+  top: 0;
+  width: 100px;
+  height: 30px;
+}
+div.body-border#leftTopHeight {
+  left: 0;
+  top: 0;
+  width: 30px;
+  height: 100px;
+}
+div.body-border#rightBottomWidth {
+  right: 0;
+  bottom: 0;
+  width: 100px;
+  height: 30px;
+}
+div.body-border#rightBottomHeight {
+  right: 0;
+  bottom: 0;
+  width: 30px;
+  height: 100px;
+}
+
+/*컨테이너*/
+div#container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+div#container .center {
+  width: calc(100% - 60px - 60px);
+  height: calc(100% - 60px - 60px);
+  /*메뉴*/
+  /*여백*/
+  /*컨텐츠*/
+}
+div#container .center nav {
+  display: inline-flex;
+  height: 100%;
+  background-color: pink;
+  float: left;
+}
+div#container .center span#space {
+  display: inline-flex;
+  width: 5px;
+  height: 100%;
+  float: left;
+}
+div#container .center section {
+  display: inline-flex;
+  height: 100%;
+}
+
+/*반응형 스타일 - 220524 해줘야 함*/
+@media (max-width: 767px) {
+  body {
+    background-color: red;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  body {
+    background-color: blue;
+  }
+  body .center nav {
+    width: 250px;
+  }
+  body .center section {
+    width: calc(100% - 5px - 250px);
+    background-color: green;
+  }
+}
+@media (min-width: 1024px) {
+  body {
+    background-color: green;
+  }
+  body .center nav {
+    width: 300px;
+  }
+  body .center section {
+    width: calc(100% - 5px - 300px);
+    background-color: red;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
