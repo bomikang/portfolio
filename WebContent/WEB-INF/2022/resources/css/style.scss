@@ -7,6 +7,7 @@
 hr{border:none; margin:20px 0;}
 
 // ============================== init classes ==============================
+.circle{border-radius: 50%;}
 //.block{display: block;}
 //.inline-block{display: inline-block;}
 
@@ -46,6 +47,32 @@ hr{border:none; margin:20px 0;}
 @mixin desktop{
   @media (min-width: $desktop) {
     @content;
+  }
+}
+
+@mixin responsive-set($type, $navWidth, $navHeight){
+  @if ($type == mobile){
+    nav{
+      width: $navWidth !important;
+      height: $navHeight !important;
+    }
+
+    span#space{
+      width: $navWidth !important;
+      height: 5px !important;
+    }
+
+    section{
+      width: $navWidth;
+    }
+  }@else if ($type == tablet or $type == desktop){
+    nav{
+      width: $navWidth;
+    }
+
+    section{
+      width: calc(100% - 5px - $navWidth);
+    }
   }
 }
 
@@ -120,8 +147,26 @@ div#container{
     nav{
       display: inline-flex;
       height: 100%;
-      background-color: pink;
+      background-color: $bdColor;
       float: left;
+      align-items: center;
+      justify-content: center;
+
+      ul{
+        font-family: fantasy;
+
+        li{
+          font-size: 1.5em;
+          margin: 10px 0;
+
+          //활성 메뉴
+          &.active-menu{
+            &::before, &::after{
+              content: ' ■ ';
+            }
+          }
+        }
+      }
     }
 
     /*여백*/
@@ -136,44 +181,68 @@ div#container{
     section{
       display: inline-flex;
       height: 100%;
+      background-color: $bgColor;
+
+      aside{
+        display: none;
+        width: 100%;
+
+        //활성 컨텐츠
+        &.active-content{
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+          overflow-y: scroll;
+          padding: 30px;
+        }
+      }
     }
   }
 }
 
+aside#ABOUT_ME{
+  img{
+    width: 300px;
+    border: 5px solid $bdColor;
+  }
 
-/*반응형 스타일 - 220524 해줘야 함*/
+  p{
+    text-align: center;
+    margin-top: 40px;
+  }
+}
+
+/*반응형 스타일*/
 body{
   @include mobile{
     background-color: red;
+
+    .center{
+      @include responsive-set(mobile, 100%, 100px); //height 임시값 세팅 (수정 필요)
+
+      //section 색깔 구분을 위해 임시 사용 (제거하기)
+      section{
+        background-color: blue;
+      }
+    }
   }
 
   @include tablet{
     background-color: blue;
 
     .center{
-      nav{
-        width: 250px;
-      }
+      @include responsive-set(tablet, 200px, 100%);
 
+      //section 색깔 구분을 위해 임시 사용 (제거하기)
       section{
-        width: calc(100% - 5px - 250px);
         background-color: green;
       }
     }
   }
 
   @include desktop{
-    background-color: green;
-
     .center{
-      nav{
-        width: 300px;
-      }
-
-      section{
-        width: calc(100% - 5px - 300px);
-        background-color: red;
-      }
+      @include responsive-set(desktop, 300px, 100%);
     }
   }
 }
