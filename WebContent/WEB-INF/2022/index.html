@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+<meta charset="UTF-8">
+<title>Title</title>
 
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="resources/css/style.css" />
+<link rel="stylesheet" href="resources/css/style.css" />
+
+<script>
+    window.addEventListener("DOMContentLoaded", function(){
+
+    });
+</script>
 </head>
 <body>
     <!-- 배경 테두리-->
@@ -16,12 +22,53 @@
     <div class="body-border" id="rightBottomHeight"></div>
     <!-- //배경 테두리-->
 
-    <!--  -->
     <div id="container">
         <div class="center">
-            <nav>nav</nav>
+            <!-- 메뉴 -->
+            <nav>
+                <ul>
+                    <li class="active-menu"><a href="#ABOUT_ME">ABOUT ME</a></li>
+                    <li><a href="#CAREER">CAREER</a></li>
+                    <li><a href="#SKILLS">SKILLS</a></li>
+                    <li><a href="#PROJECT1">PERSONAL PROJECT1</a></li>
+                    <li><a href="#PROJECT2">PERSONAL PROJECT2</a></li>
+                    <li><a href="#CONTACT">CONTACT</a></li>
+                    <li><a href="#TMI">TMI</a></li>
+                </ul>
+            </nav>
+            <!-- //메뉴 -->
+
             <span id="space"> </span><!--단순 여백-->
-            <section>section</section>
+
+            <section>
+                <!--ABOUT ME-->
+                <aside id="ABOUT_ME" class="active-content">
+                    <div>
+                        <img src="resources/img/emoji.jpg" alt="내 이모지" class="circle">
+
+                        <p>강 보 미</p>
+
+                        <p>scrolltest</p><p>scrolltest</p><p>scrolltest</p><p>scrolltest</p><p>scrolltest</p><p>scrolltest</p>
+                        <p>scrolltest</p><p>scrolltest</p><p>scrolltest</p><p>scrolltest</p><p>scrolltest</p><p>scrolltest</p>
+                        <p>scrolltest</p><p>scrolltest</p><p>scrolltest</p><p>scrolltest</p><p>scrolltest</p><p>scrolltest</p>
+                        <p>scrolltest</p><p>scrolltest</p><p>scrolltest</p><p>scrolltest</p><p>scrolltest</p><p>scrolltest</p>
+                        <p>scrolltest</p><p>scrolltest</p><p>scrolltest</p><p>scrolltest</p><p>scrolltest</p><p>scrolltest</p>
+                        <p>scrolltest</p><p>scrolltest</p><p>scrolltest</p><p>scrolltest</p><p>scrolltest</p><p>scrolltest</p>
+                        <p>scrolltest</p><p>scrolltest</p><p>scrolltest</p><p>scrolltest</p><p>scrolltest</p><p>scrolltest</p>
+                        <p>scrolltest</p><p>scrolltest</p><p>scrolltest</p><p>scrolltest</p><p>scrolltest</p><p>scrolltest</p>
+                        <p>scrolltest</p><p>scrolltest</p><p>scrolltest</p><p>scrolltest</p><p>scrolltest</p><p>scrolltest</p>
+                        <p>scrolltest</p><p>scrolltest</p><p>scrolltest</p><p>scrolltest</p><p>scrolltest</p><p>scrolltest</p>
+                        <p>scrolltest</p><p>scrolltest</p><p>scrolltest</p><p>scrolltest</p><p>scrolltest</p><p>scrolltest</p>
+                    </div>
+                </aside>
+                <!--//ABOUT ME-->
+
+                <!--CAREER-->
+                <aside id="CAREER">
+                    CAREER
+                </aside>
+                <!--//CAREER-->
+            </section>
         </div>
     </div>
 </body>

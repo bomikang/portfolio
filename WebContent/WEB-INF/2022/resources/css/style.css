@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/*배경 테두리 컬러*/
+/*배경 컬러*/
 /*배경 테두리 넓이 및 길이*/
 /*반응형 화면 크기*/
 * {
@@ -16,6 +16,10 @@ hr {
   margin: 20px 0;
 }
 
+.circle {
+  border-radius: 50%;
+}
+
 body {
   width: 100%;
   position: fixed;
@@ -24,7 +28,7 @@ body {
 /*배경 테두리*/
 div.body-border {
   display: block;
-  background-color: #ccc;
+  background-color: #ffe3b0;
   position: fixed;
 }
 div.body-border#leftTopWidth {
@@ -71,8 +75,20 @@ div#container .center {
 div#container .center nav {
   display: inline-flex;
   height: 100%;
-  background-color: pink;
+  background-color: #ffe3b0;
   float: left;
+  align-items: center;
+  justify-content: center;
+}
+div#container .center nav ul {
+  font-family: fantasy;
+}
+div#container .center nav ul li {
+  font-size: 1.5em;
+  margin: 10px 0;
+}
+div#container .center nav ul li.active-menu::before, div#container .center nav ul li.active-menu::after {
+  content: " ■ ";
 }
 div#container .center span#space {
   display: inline-flex;
@@ -83,12 +99,47 @@ div#container .center span#space {
 div#container .center section {
   display: inline-flex;
   height: 100%;
+  background-color: #fff8eb;
+}
+div#container .center section aside {
+  display: none;
+  width: 100%;
+}
+div#container .center section aside.active-content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+  padding: 30px;
 }
 
-/*반응형 스타일 - 220524 해줘야 함*/
+aside#ABOUT_ME img {
+  width: 300px;
+  border: 5px solid #ffe3b0;
+}
+aside#ABOUT_ME p {
+  text-align: center;
+  margin-top: 40px;
+}
+
+/*반응형 스타일*/
 @media (max-width: 767px) {
   body {
     background-color: red;
+  }
+  body .center nav {
+    width: 100% !important;
+    height: 100px !important;
+  }
+  body .center span#space {
+    width: 100% !important;
+    height: 5px !important;
+  }
+  body .center section {
+    width: 100%;
+  }
+  body .center section {
+    background-color: blue;
   }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -96,23 +147,21 @@ div#container .center section {
     background-color: blue;
   }
   body .center nav {
-    width: 250px;
+    width: 200px;
   }
   body .center section {
-    width: calc(100% - 5px - 250px);
+    width: calc(100% - 5px - 200px);
+  }
+  body .center section {
     background-color: green;
   }
 }
 @media (min-width: 1024px) {
-  body {
-    background-color: green;
-  }
   body .center nav {
     width: 300px;
   }
   body .center section {
     width: calc(100% - 5px - 300px);
-    background-color: red;
   }
 }
 
