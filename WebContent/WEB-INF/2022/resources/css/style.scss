@@ -8,8 +8,16 @@ hr{border:none; margin:20px 0;}
 
 // ============================== init classes ==============================
 .circle{border-radius: 50%;}
+.marg-t30{margin-top: 30px;}
+.marg-b30{margin-bottom: 30px;}
 //.block{display: block;}
 //.inline-block{display: inline-block;}
+
+// ============================== init font ==============================
+@font-face{
+  font-family: "MaruBuri-Bold";
+  src: url("MaruBuri-Bold.otf") format("opentype");
+}
 
 // ============================== init mixins ==============================
 @mixin body-border-style($pos, $shape){
@@ -187,6 +195,11 @@ div#container{
         display: none;
         width: 100%;
 
+        div:first-child{
+          width: 100%;
+          text-align: center;
+        }
+
         //활성 컨텐츠
         &.active-content{
           display: flex;
@@ -200,15 +213,32 @@ div#container{
   }
 }
 
-aside#ABOUT_ME{
-  img{
-    width: 300px;
-    border: 5px solid $bdColor;
+aside{
+  .tag{
+    font-family: "MaruBuri-Bold";
+    font-size: $tagFontSize;
+    font-style: italic;
   }
 
-  p{
-    text-align: center;
-    margin-top: 40px;
+  &#ABOUT_ME {
+    img {
+      width: 250px;
+      border: 5px solid $bdColor;
+    }
+
+    //이름
+    .title {
+      font-family: "MaruBuri-Bold";
+      font-size: $titFontSize;
+
+      span{
+        text-shadow: 0px 0px 20px $bdColor;
+      }
+    }
+
+    p {
+      text-align: center;
+    }
   }
 }
 
