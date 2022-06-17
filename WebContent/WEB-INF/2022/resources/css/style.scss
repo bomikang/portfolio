@@ -20,6 +20,7 @@ hr{border:none; margin:20px 0;}
 }
 
 // ============================== init mixins ==============================
+/*배경 테두리 스타일*/
 @mixin body-border-style($pos, $shape){
   //배경 테두리 위치
   @if($pos == left-top) {
@@ -40,6 +41,7 @@ hr{border:none; margin:20px 0;}
   }
 }
 
+/*반응형 스타일*/
 @mixin mobile{
   @media (max-width: $mobile) {
     @content;
@@ -72,6 +74,7 @@ hr{border:none; margin:20px 0;}
 
     section{
       width: $navWidth;
+      height: calc(100% - 5px - $navHeight) !important;
     }
   }@else if ($type == tablet or $type == desktop){
     nav{
@@ -80,6 +83,7 @@ hr{border:none; margin:20px 0;}
 
     section{
       width: calc(100% - 5px - $navWidth);
+      height: 100%;
     }
   }
 }
@@ -208,36 +212,44 @@ div#container{
           overflow-y: scroll;
           padding: 30px;
         }
+
+        .tbl_info{
+          margin-left: auto;
+          margin-right: auto;
+
+          td{
+            padding-top: 5px;
+          }
+        }
+
+        .tag{
+          font-family: "MaruBuri-Bold";
+          font-size: $tagFontSize;
+          font-style: italic;
+        }
+
+        .title{
+          font-family: "MaruBuri-Bold";
+          font-size: $titFontSize;
+          text-shadow: 0px 0px 5px $bdColor;
+        }
       }
     }
   }
 }
 
 aside{
-  .tag{
-    font-family: "MaruBuri-Bold";
-    font-size: $tagFontSize;
-    font-style: italic;
-  }
-
-  &#ABOUT_ME {
-    img {
+  &#ABOUT_ME{
+    img#myEmoji{
       width: 250px;
       border: 5px solid $bdColor;
     }
 
-    //이름
-    .title {
-      font-family: "MaruBuri-Bold";
-      font-size: $titFontSize;
-
-      span{
-        text-shadow: 0px 0px 20px $bdColor;
+    .sns{
+      img{
+        width: 32px;
+        margin: 0 3px;
       }
-    }
-
-    p {
-      text-align: center;
     }
   }
 }
