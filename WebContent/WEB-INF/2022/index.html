@@ -9,22 +9,18 @@
 <link rel="stylesheet" href="resources/css/style.css" />
 
 <script>
-    let menuList;
 
     window.addEventListener("DOMContentLoaded", function(){
         document.getElementById("age").textContent = myAge();
-        menuList = document.querySelectorAll("nav ul li");
 
-        //강보미 - 메뉴 클릭 이벤트 적용할 차례
+        //메뉴 클릭 이벤트
+        let menuList = document.querySelectorAll("nav ul li");
         menuList.forEach(function (menu){
             const link = menu.children[0];
             link.onclick = function(){
-
-                console.log('test');
-
-                /*if (menu.classList.contains("active-menu")){
-                    menu.classList.remove("active-menu");
-                }*/
+                //현재 적용되어 있는 클래스 제거 후 클릭한 메뉴에 추가
+                document.getElementsByClassName("active-menu").item(0).classList.remove("active-menu");
+                menu.classList.add("active-menu");
             }
         });
     });
