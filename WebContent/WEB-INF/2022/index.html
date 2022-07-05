@@ -18,9 +18,12 @@
         menuList.forEach(function (menu){
             const link = menu.children[0];
             link.onclick = function(){
-                //현재 적용되어 있는 클래스 제거 후 클릭한 메뉴에 추가
                 document.getElementsByClassName("active-menu").item(0).classList.remove("active-menu");
                 menu.classList.add("active-menu");
+
+                const contentId = link.getAttribute("href").replace("#", "");
+                document.getElementsByClassName("active-content").item(0).classList.remove("active-content");
+                document.getElementById(contentId).classList.add("active-content");
             }
         });
     });
@@ -82,19 +85,26 @@
                             <a href="" title="github"><img src="resources/img/icon-github.png"></a>
                             <a href="" title="github"><img src="resources/img/icon-github.png"></a>
                         </div>
-
-                        <!--<p>scroll</p><p>scroll</p><p>scroll</p><p>scroll</p><p>scroll</p><p>scroll</p><p>scroll</p><p>scroll</p><p>scroll</p><p>scroll</p>
-                        <p>scroll</p><p>scroll</p><p>scroll</p><p>scroll</p><p>scroll</p><p>scroll</p><p>scroll</p><p>scroll</p><p>scroll</p><p>scroll</p>
-                        <p>scroll</p><p>scroll</p><p>scroll</p><p>scroll</p><p>scroll</p><p>scroll</p><p>scroll</p><p>scroll</p><p>scroll</p><p>scroll</p>
-                        <p>scroll</p><p>scroll</p><p>scroll</p><p>scroll</p><p>scroll</p><p>scroll</p><p>scroll</p><p>scroll</p><p>scroll</p><p>scroll</p>-->
-
                     </div>
                 </aside>
                 <!--//ABOUT ME-->
 
                 <!--CAREER-->
                 <aside id="CAREER">
-                    CAREER
+                    <div>
+                        <table class="tbl_info marg-t30 marg-b30" title="경력사항">
+                            <tr><th class="tag">#웹 개발 경력<span.title></span.title></th></tr>
+                            <tr><td class="title">5개월<br><br></td></tr>
+                            <tr><th class="tag">#RPA 개발 경력</th></tr>
+                            <tr><td class="title">6개월<br><br></td></tr>
+                            <tr><th class="tag">#QA 경력</th></tr>
+                            <tr><td class="title">2년 6개월<br><br></td></tr>
+                            <tr><th class="tag">#이메일</th></tr>
+                            <tr><td class="title">important_mail@naver.com<br>bomiisworldstar@gmail.com<br><br></td></tr>
+                            <tr><th class="tag">#연락처</th></tr>
+                            <tr><td class="title">010-5108-4160</td></tr>
+                        </table>
+                    </div>
                 </aside>
                 <!--//CAREER-->
             </section>
